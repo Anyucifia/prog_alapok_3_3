@@ -14,3 +14,11 @@ with open('csigak.txt', 'r', encoding='UTF-8') as bemenet:
         csigak.append(csiga) 
         csiga = {}
 print(f'{len(csigak)} db csiga faj van a listában')
+
+db = 0
+for i in range(len(csigak)):
+    if 'meztelen' in csigak[i]['magyar_n'] and 'fél' not in csigak[i]['magyar_n']:
+        db+=1
+
+print(f"{db} db meztelen csiga van a listában")
+    
